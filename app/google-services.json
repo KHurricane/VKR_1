@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "176344245073",
+    "project_id": "myshop-bf516",
+    "storage_bucket": "myshop-bf516.appspot.com",
+    "firebase_url": "https://myshop-bf516-default-rtdb.europe-west1.firebasedatabase.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176344245073:android:f96ce6f040d8290f0f6970",
+        "android_client_info": {
+          "package_name": "com.example.myshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnlO781fUV6NvBiSr0pYqLKUYoak8UYsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

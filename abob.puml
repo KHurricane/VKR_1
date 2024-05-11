@@ -1,0 +1,157 @@
+@startuml
+class com.example.myshop.ui.Users.MainActivity {
+- Button joinButton
+- Button loginButton
+- ProgressDialog loadingBar
+# void onCreate(Bundle)
+- void ValidateUser(String,String)
+}
+
+
+interface com.example.myshop.Interface.ItemClickListner {
+~ void onClick(View,int,boolean)
+}
+
+class com.example.myshop.Prevalent.Prevalent {
++ {static} Users currentOnlineUser
++ {static} String UserPhoneKey
++ {static} String UserPasswordKey
+}
+
+class com.example.myshop.ui.RegisterActivity {
+- Button registerButton
+- EditText usernameInput
+- ProgressDialog loadingBar
+# void onCreate(Bundle)
+- void CreateAccount()
+- void ValidatePhone(String,String,String)
+}
+
+
+class com.example.myshop.Model.Users {
+- String name
++ String getImage()
++ void setImage(String)
++ String getName()
++ void setName(String)
++ String getPhone()
++ void setPhone(String)
++ String getPassword()
++ void setPassword(String)
+}
+
+
+class com.example.myshop.ui.Admin.AdminAddNewProductActivity {
+- String categoryName
+- String downloadImageUrl
+- ImageView productImage
+- EditText productName
+- Button addNewProductButton
+- {static} int GALLERYPICK
+- Uri ImageUri
+- StorageReference ProductImageRef
+- DatabaseReference ProductsRef
+- ProgressDialog loadingBar
+# void onCreate(Bundle)
+- void ValidateProductData()
+- void StoreProductInformation()
+- void SaveProductInfoToDatabase()
+- void OpenGallery()
+# void onActivityResult(int,int,Intent)
+- void init()
+}
+
+
+class com.example.myshop.Model.Products {
+- String pname
++ String getPname()
++ void setPname(String)
++ String getDescription()
++ void setDescription(String)
++ String getPrice()
++ void setPrice(String)
++ String getImage()
++ void setImage(String)
++ String getCategory()
++ void setCategory(String)
++ String getPid()
++ void setPid(String)
++ String getDate()
++ void setDate(String)
++ String getTime()
++ void setTime(String)
+}
+
+
+class com.example.myshop.ui.Admin.AdminCategoryActivity {
+- ImageView acu
+# void onCreate(Bundle)
+- void init()
+}
+
+
+class com.example.myshop.ViewHolder.ProductViewHolder {
++ TextView txtProductName
++ ImageView imageView
++ ItemClickListner listner
++ void setItemClickListner(ItemClickListner)
++ void onClick(View)
+}
+
+
+class com.example.myshop.ui.Users.HomeActivity {
+- AppBarConfiguration mAppBarConfiguration
+~ DatabaseReference ProductsRef
+- RecyclerView recyclerView
+~ RecyclerView.LayoutManager layoutManager
+# void onCreate(Bundle)
+# void onStart()
++ void onBackPressed()
++ boolean onNavigationItemSelected(MenuItem)
+}
+
+
+class com.example.myshop.ui.Users.SettingsActivity {
+- CircleImageView profileImageView
+- {static} int GALLERYPICK
+- EditText fullNameEditText
+- TextView saveTextButton
+- Uri imageUri
+- String checker
+- StorageReference storageProfilePictureRef
+- StorageTask uploadTask
+# void onCreate(Bundle)
+- void userInfoDisplay(CircleImageView,EditText,EditText,EditText)
+# void onActivityResult(int,int,Intent)
+- void userInfoSaved()
+- void uploadImage()
+- void updateOnlyUserInfo()
+}
+
+
+class com.example.myshop.ui.LoginActivity {
+- EditText phoneInput
+- ProgressDialog loadingBar
+- TextView AdminLink
+- Button loginBtn
+- String parentDbName
+- CheckBox checkBoxRememberMe
+# void onCreate(Bundle)
+- void loginUser()
+- void ValidateUser(String,String)
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.Users.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.RegisterActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.Admin.AdminAddNewProductActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.Admin.AdminCategoryActivity
+com.example.myshop.ViewHolder.OnClickListener <|.. com.example.myshop.ViewHolder.ProductViewHolder
+com.example.myshop.ViewHolder.ViewHolder <|-- com.example.myshop.ViewHolder.ProductViewHolder
+com.example.myshop.ui.Users.OnNavigationItemSelectedListener <|.. com.example.myshop.ui.Users.HomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.Users.HomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.Users.SettingsActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myshop.ui.LoginActivity
+@enduml

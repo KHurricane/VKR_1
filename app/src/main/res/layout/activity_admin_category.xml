@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Admin.AdminCategoryActivity">
+
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите категорию"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/first_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/slogan">
+
+        <ImageView
+            android:id="@+id/acu"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/acu"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mic"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/game"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/game"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/first_line">
+
+        <ImageView
+            android:id="@+id/vinil"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/vinil"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/custom"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/custom"
+            android:layout_margin="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/cabel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/cabel"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
