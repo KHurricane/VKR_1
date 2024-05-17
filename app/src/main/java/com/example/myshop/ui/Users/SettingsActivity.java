@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.myshop.Prevalent.Prevalent;
 import com.example.myshop.R;
+import com.example.myshop.ui.ImageLoader;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -84,19 +85,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        profileImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checker = "clicked";
-                    Intent galleryIntent = new Intent();
-                    galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-                    galleryIntent.setType("image/*");
-                    startActivityForResult(galleryIntent,GALLERYPICK);
 
-
-
-            }
-        });
     }
 
 
@@ -117,10 +106,10 @@ public class SettingsActivity extends AppCompatActivity {
                         String phone = dataSnapshot.child("phone").getValue().toString();
                         String address = dataSnapshot.child("address").getValue().toString();
 
-                        Picasso.get().load(image).into(profileImageView);
                         fullNameEditText.setText(name);
                         userPhoneEditText.setText(phone);
                         addressEditText.setText(address);
+                        new ImageLoader(profileImageView).execute(image);
                     }
 
                     if (dataSnapshot.child("address").exists())

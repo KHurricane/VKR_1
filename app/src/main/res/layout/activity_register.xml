@@ -28,8 +28,8 @@
         android:layout_marginLeft="25dp"
         android:hint="Имя пользователя"
         android:inputType="text"
-        android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         />
@@ -46,8 +46,8 @@
         android:layout_marginLeft="25dp"
         android:hint="Номер телефона"
         android:inputType="number"
-        android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         />
@@ -63,8 +63,8 @@
         android:layout_marginLeft="25dp"
         android:hint="Пароль"
         android:inputType="textPassword"
-        android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/black"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         />

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MyShop"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.Users.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.CabelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.CustomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.VinilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.MicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Goods.AcuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.CartActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.Users.SettingsActivity"
             android:exported="false" />
