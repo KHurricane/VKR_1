@@ -177,6 +177,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.nav_cart){
+            Intent cartIntent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(cartIntent);
 
         } else if(id == R.id.nav_orders){
             Intent ordersIntent = new Intent(HomeActivity.this, OrdersActivity.class);
@@ -195,9 +197,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Paper.book().destroy();
             Intent loginIntent = new Intent(HomeActivity.this, LoginActivity.class);
             startActivity(loginIntent);
-        } else if (id == R.id.nav_cart) {
-            Intent cartIntent = new Intent(HomeActivity.this, CartActivity.class);
-            startActivity(cartIntent);
         }
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
