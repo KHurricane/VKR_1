@@ -1,180 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Admin.AdminCategoryActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".ui.Users.CategoryActivity">
 
-
-    <TextView
-        android:id="@+id/slogan"
+    <include
+        android:id="@+id/app_bar_cat"
+        layout="@layout/app_bar_cat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Выберите категорию"
-        android:textSize="25sp"
-        android:textStyle="bold|italic"
-        android:gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_home"
+        app:menu="@menu/activity_main_drawer"
+        tools:visibility="visible" />
 
     <LinearLayout
-        android:id="@+id/first_line"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/slogan">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#222222"
+        android:layout_marginTop="55dp"
+        >
 
-        <ImageView
-            android:id="@+id/acu"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/acu"
-            android:layout_margin="10dp"
-            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/head" />
 
-        <ImageView
-            android:id="@+id/mic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/mic"
-            android:layout_margin="10dp"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Наушники и personal аудио"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/game"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/game"
-            android:layout_margin="10dp"
-            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
 
+            <ImageView
+                android:id="@+id/acu"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/acu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Акустика и hi-fi аудио"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/mic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Микрофоны и pro аудио"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/game"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/game" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Гарнитуры и game аудио"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/vinil"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/vinil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Винил и музыка"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/custom"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/custom" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom shop"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/cabel"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/cabel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Аксессуары"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/second_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/first_line"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="Акустика"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="50dp"
-            />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Микрофоны"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="42dp"
-            />
-
-        <TextView
-
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Гарнитуры"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="30dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/second_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/second_text">
-
-        <ImageView
-            android:id="@+id/vinil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/vinil"
-            android:layout_margin="10dp"
-            />
-
-        <ImageView
-            android:id="@+id/custom"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/custom"
-            android:layout_margin="10dp"
-            />
-
-        <ImageView
-            android:id="@+id/cabel"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/cabel"
-            android:layout_margin="10dp"
-
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/third_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/second_line"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="Винил"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="60dp"
-            />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Custom"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="70dp"
-            />
-
-        <TextView
-
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Аксессуары"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="50dp"
-            />
-
-    </LinearLayout>
 
 
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
